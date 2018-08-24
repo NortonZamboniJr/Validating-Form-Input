@@ -42,7 +42,7 @@ public class WebController implements WebMvcConfigurer {
         return "login";
     }
 
-    @PostMapping("/login")
+     @PostMapping("/")
     public String checkPersonInfo(@Valid PersonForm personForm, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
@@ -50,7 +50,7 @@ public class WebController implements WebMvcConfigurer {
         }
 
         return "redirect:/results";
-    }
+    } 
 	
 	//@PostMapping("/")
     //public String checkPersonInfo1(@Valid PersonForm personForm, BindingResult bindingResult) {
